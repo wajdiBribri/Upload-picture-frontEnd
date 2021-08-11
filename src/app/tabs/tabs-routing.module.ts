@@ -18,6 +18,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'upl',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../upload-picture/upload-picture.module').then(m => m.UploadPicturePageModule)
+          }
+        ]
+      },
+      {
         path: 'tab2',
         children: [
           {
